@@ -1,3 +1,4 @@
+# first come first serve scheduling algorithm
 #include <stdio.h>
 void main(){
 	int n,i;
