@@ -1,4 +1,4 @@
-# longest job first scheduling algorithm
+// longest job first scheduling algorithm
 #include <stdio.h>
 # define INT_MAX 9999
 void main(){
@@ -21,11 +21,22 @@ void main(){
 		k = 0;
 		flag = 0;
 		max = -1;
+		tmin= INT_MAX;
 		for(i = 0; i < n; i++){
 			if(isVis[i] == 0){
 				if(bt[i] > max && at[i] <= t){
-					k = i;
-					max = bt[i];
+					if(min == bt[i]){  // To consider arrival time in case of equal burst time
+						if(at[i] < tmin){
+							k = i;
+							max = bt[i];
+							tmin = at[i];
+						}
+					}
+					else{
+						k = i;
+						max = bt[i];
+						tmin = at[i];
+					}
 				}
 			}
 		}
