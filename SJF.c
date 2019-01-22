@@ -1,4 +1,4 @@
-# shortest job first scheduling algorithm
+// shortest job first scheduling algorithm
 #include <stdio.h>
 # define INT_MAX 9999
 void main(){
@@ -21,11 +21,22 @@ void main(){
 		k = 0;
 		flag = 0;
 		min = INT_MAX;
+		tmin= INT_MAX;
 		for(i = 0; i < n; i++){
 			if(isVis[i] == 0){
-				if(bt[i] < min && at[i] <= t){
-					k = i;
-					min = bt[i];
+				if(bt[i] <= min && at[i] <= t){
+					if(min == bt[i]){  // To consider arrival time in case of equal burst time
+						if(at[i] < tmin){
+							k = i;
+							min = bt[i];
+							tmin = at[i];
+						}
+					}
+					else{
+						k = i;
+						min = bt[i];
+						tmin = at[i];
+					}
 				}
 			}
 		}
