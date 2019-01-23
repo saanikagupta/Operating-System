@@ -19,12 +19,12 @@ void main(){
 	float t;
 	int k = 0;
 	int flag;
-	int ct[n], wt[n], tat[n], tmin, min;
+	int ct[n], wt[n], tat[n], tmin, rr;
 	float hrrn[n];
 	while(visited < n){
 		k = 0;
-		flag=0;
-		min = -1;
+		flag = 0;
+		rr = -1;
 		tmin = INT_MAX;
 		for(i = 0; i < n; i++){
 			if(isVis[i] == 0 && at[i] <= t){ // Calculating RR values
@@ -35,23 +35,23 @@ void main(){
 		}
 		for(j = 0; j < n; j++){
 			if(isVis[j] == 0){
-				if(hrrn[j]>=min && at[j]<=t){
-					if(hrrn[j] == min){  // For equal RR values, considering arrival time
+				if(hrrn[j] >= rr && at[j] <= t){
+					if(hrrn[j] == rr){  // For equal RR values, considering arrival time
 						if(at[j] < tmin){
 							k = j;
-							min = hrrn[j];
+							rr = hrrn[j];
 							tmin = at[j];
 						}		
 					}
 					else{
 						k = j;
-						min = hrrn[j];
+						rr = hrrn[j];
 						tmin = at[j];
 					}
 				}
 			}
 		}
-		if(min == INT_MAX){
+		if(rr == -1){
 			flag = 1;
 			tmin = INT_MAX;
 			for(j = 0; j < n; j++){
