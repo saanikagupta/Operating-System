@@ -16,7 +16,7 @@ void main(){
 		scanf("%d", &bt[j]);
 		isVis[j] = 0;
 	}
-	float t;
+	int t;
 	int k = 0;
 	int flag;
 	int ct[n], wt[n], tat[n], tmin, rr;
@@ -33,6 +33,14 @@ void main(){
 			else
 				hrrn[i] = 0;
 		}
+		/*	
+		for(i = 0; i < n; i++)
+			printf("%f ", hrrn[i]);
+		printf("\n");
+		for(i = 0; i < n; i++)
+			printf("%d ", isVis[i]);
+		printf("\n");
+		*/
 		for(j = 0; j < n; j++){
 			if(isVis[j] == 0){
 				if(hrrn[j] >= rr && at[j] <= t){
