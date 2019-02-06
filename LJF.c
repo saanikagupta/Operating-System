@@ -69,7 +69,7 @@ void main(){
 	for(i = 0; i < n; i++){
 		printf("P%d\t%d\t%d\t%d\t%d\t%d\n", i+1, at[i], bt[i], ct[i], tat[i], wt[i]);
 	}
-	float avg_tat, avg_wt;
+	float avg_tat = 0, avg_wt = 0;
 	for(i = 0; i < n; i++){
 		avg_tat += tat[i];
 		avg_wt += wt[i];
