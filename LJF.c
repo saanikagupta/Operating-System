@@ -25,7 +25,7 @@ void main(){
 		for(i = 0; i < n; i++){
 			if(isVis[i] == 0){
 				if(bt[i] > max && at[i] <= t){
-					if(min == bt[i]){  // To consider arrival time in case of equal burst time
+					if(max == bt[i]){  // To consider arrival time in case of equal burst time
 						if(at[i] < tmin){
 							k = i;
 							max = bt[i];
