@@ -30,7 +30,7 @@ void main(){
 		for(i = 0; i < n; i++){
 			if(isVis[i] == 0){
 				if(priority[i] > max && at[i] <= t){
-					if(max == priority[i]){  // To consider arrival time in case of equal burst time
+					if(max == priority[i]){  // To consider arrival time in case of equal priority
 						if(at[i] < tmin){
 							k = i;
 							max = priority[i];
