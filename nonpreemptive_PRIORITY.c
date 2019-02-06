@@ -2,10 +2,10 @@
 #include <stdio.h>
 # define INT_MAX 9999
 void main(){
-	int n, i, j, priority[n];
+	int n, i, j;
 	printf("\nEnter the number of jobs:\n");
 	scanf("%d", &n);
-	int at[n], bt[n], isVis[n], visited = 0;
+	int at[n], bt[n], isVis[n], visited = 0, priority[n];
 	printf("\nEnter the priority:\n");
 	for(j = 0; j < n; j++){
 		scanf("%d", &priority[j]);
