@@ -40,11 +40,11 @@ void main(){
 				}
 			}
 		}
-		if(bt_copy[k] == bt[k]){
-				rt[k] = t-at[k];
-		}
 		t++;
 		if(min != INT_MAX){
+			if(bt_copy[k] == bt[k]){
+				rt[k] = t - at[k] - 1;
+			}
 			bt_copy[k] -= 1;
 			if(bt_copy[k] == 0){
 				ct[k] = t;
