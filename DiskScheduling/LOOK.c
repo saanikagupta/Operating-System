@@ -12,7 +12,7 @@ int main(){
 		scanf("%d", &rq[i]);
 	}
 	char x;
-	int flag = 0, casee = 0;
+	int flag = 0;
 	while(flag != 2){
 		printf("Enter the direction (u/d):\n");
 		scanf(" %c", &x);
