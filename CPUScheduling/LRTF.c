@@ -1,4 +1,4 @@
-// shortest remaining time first scheduling algorithm
+// longest remaining time first scheduling algorithm
 #include <stdio.h>
 # define INT_MAX 9999
 void main(){
